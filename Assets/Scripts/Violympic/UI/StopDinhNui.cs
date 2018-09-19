@@ -17,7 +17,9 @@ public class StopDinhNui : MonoBehaviour {
 
 	public void setData(int pCoin, string pTime)
 	{
-        
+     
+		try
+		{
 		if (VioGameController.instance.checkvip != 10) {
 			if (VioGameController.instance.tienganh && VioGameController.instance.vuotqua < 3) {
 
@@ -35,12 +37,19 @@ public class StopDinhNui : MonoBehaviour {
 		//nativeExpressAdView.Show();
 		txtCoin.text = ClsLanguage.doDiem()+": " + pCoin;
 		txtTime.text = ClsLanguage.doTime()+": " + pTime;
+		}
+		catch (System.Exception)
+		{
+
+			throw;
+		}
 
 	}
 
 	void onClick_btnContinute()
 	{
-
+		try
+		{
 		VioPopUpController.instance.HideStopDinhNui();
 
 		VioGameController.instance.ShowLevel2();
@@ -55,17 +64,29 @@ public class StopDinhNui : MonoBehaviour {
 				AdStartApp.instance.HideBanner ();
 			}
 		}
+		}
+		catch (System.Exception)
+		{
 
+			throw;
+		}
 
 	}
 
 	// Use this for initialization
 	void Start () {
+		try
+		{
 		btnContinute.OnClick += onClick_btnContinute;
 
 		txtHoanThanh.text = ClsLanguage.doHoanThanhBaiThi();
 		txtDinhNui.text = ClsLanguage.doTitleDinhNui();
-	
+		}
+		catch (System.Exception)
+		{
+
+			throw;
+		}
 	
 	}
 

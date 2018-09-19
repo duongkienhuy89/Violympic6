@@ -30,6 +30,8 @@ public class VioLevelController : MonoBehaviour {
 	public tk2dUIItem btnBack;
 	void onClick_Back()
 	{
+		try
+		{
 		VioPopUpController.instance.HideLevel();
 		VioPopUpController.instance.ShowMainGame();
         SoundController.Instance.PlayClick();
@@ -41,6 +43,14 @@ public class VioLevelController : MonoBehaviour {
 			} else {
 				AdStartApp.instance.ShowBanner ();
 			}
+		}
+
+
+		}
+		catch (System.Exception)
+		{
+
+			throw;
 		}
 	}
 
@@ -103,9 +113,17 @@ public class VioLevelController : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		
+
+		try
+		{
 		btnBack.OnClick += onClick_Back;
 		Createlevl(20);
+		}
+		catch (System.Exception)
+		{
+
+			throw;
+		}
 
 	}
 

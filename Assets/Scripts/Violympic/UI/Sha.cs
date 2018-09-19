@@ -7,6 +7,8 @@ public class Sha : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 
+		try
+		{
         int chon = UnityEngine.Random.Range(0, 3);
         if (chon == 0)
         {
@@ -18,6 +20,12 @@ public class Sha : MonoBehaviour {
             this.transform.GetChild(1).gameObject.SetActive(true);
             this.transform.GetChild(0).gameObject.SetActive(false);
         }
+		}
+		catch (System.Exception)
+		{
+
+			throw;
+		}
 	
 	}
 	

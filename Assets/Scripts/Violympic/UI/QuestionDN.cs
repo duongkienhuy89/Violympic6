@@ -147,6 +147,8 @@ public class QuestionDN : MonoBehaviour {
 
 	public void doSubGet(ref List<DinhNui> lst)
 	{
+		try
+		{
 		if (lst.Count > 0)
 		{
 			int chon = UnityEngine.Random.Range(0, lst.Count);
@@ -254,12 +256,20 @@ public class QuestionDN : MonoBehaviour {
 		{
 		}
 		LaiVanSam.SetSprite ("hoi");
+		}
+		catch (System.Exception)
+		{
+
+			throw;
+		}
 
 	}
 
 
 	void btnA_OnClick()
 	{
+		try
+		{
 		if (currentState == State.InGame)
 		{
 			currentState = State.Click;
@@ -276,9 +286,17 @@ public class QuestionDN : MonoBehaviour {
                 SoundController.Instance.PlayClick();
             }
 		}
+		}
+		catch (System.Exception)
+		{
+
+			throw;
+		}
 	}
 	void btnB_OnClick()
 	{
+		try
+		{
 		if (currentState == State.InGame)
 		{
 			currentState = State.Click;
@@ -295,9 +313,17 @@ public class QuestionDN : MonoBehaviour {
                  SoundController.Instance.PlayClick();
              }
 		}
+		}
+		catch (System.Exception)
+		{
+
+			throw;
+		}
 	}
 	void btnC_OnClick()
 	{
+		try
+		{
 		if (currentState == State.InGame)
 		{
 			currentState = State.Click;
@@ -314,9 +340,17 @@ public class QuestionDN : MonoBehaviour {
                  SoundController.Instance.PlayClick();
              }
 		}
+		}
+		catch (System.Exception)
+		{
+
+			throw;
+		}
 	}
 	void btnD_OnClick()
 	{
+		try
+		{
 		if (currentState == State.InGame)
 		{
 			currentState = State.Click;
@@ -333,11 +367,18 @@ public class QuestionDN : MonoBehaviour {
                 SoundController.Instance.PlayClick();
             }
 		}
+		}
+		catch (System.Exception)
+		{
+
+			throw;
+		}
 	}
 
 	void doXuLy(int selectCase)
 	{
-
+		try
+		{
 		//SoundManager.Instance.PlayAudioClick();
 		nguoi.SetSprite("nguoihoi");
 		LaiVanSam.SetSprite ("suyluan");
@@ -351,7 +392,12 @@ public class QuestionDN : MonoBehaviour {
         {
             StartCoroutine(WaitTimeDuaRa(2f));
         }
+		}
+		catch (System.Exception)
+		{
 
+			throw;
+		}
 
 	}
 
@@ -633,7 +679,8 @@ public class QuestionDN : MonoBehaviour {
 
 	void btnContinute_OnClick()
 	{
-
+		try
+		{
 		if (demsai < 3)
 		{
 			bangbieu.SetActive(false);
@@ -646,12 +693,19 @@ public class QuestionDN : MonoBehaviour {
 			gameOver();
 		}
         SoundController.Instance.PlayClick();
+		}
+		catch (System.Exception)
+		{
+
+			throw;
+		}
 	}
 
 	void gameOver()
 	{
 
-
+		try
+		{
 		currentState = State.Stop;
 		if (diemSo < 0)
 		{
@@ -662,13 +716,20 @@ public class QuestionDN : MonoBehaviour {
 		VioPopUpController.instance.ShowStopDinhNui(diemSo, ClsThaoTac.CoverTimeToString(1200 - mTime));
 		VioPopUpController.instance.HideQuestionDinhNui();
 		resetThongSo();
+		}
+		catch (System.Exception)
+		{
+
+			throw;
+		}
 	}
 
 
 
 	// Use this for initialization
 	void Start () {
-
+		try
+		{
 
 		txtTitle.text = ClsLanguage.doQuestion();
 
@@ -677,6 +738,12 @@ public class QuestionDN : MonoBehaviour {
 		btnC.OnClick += btnC_OnClick;
 		btnD.OnClick += btnD_OnClick;
 		btnContinute.OnClick += btnContinute_OnClick;
+		}
+		catch (System.Exception)
+		{
+
+			throw;
+		}
 	}
 
 	// Update is called once per frame

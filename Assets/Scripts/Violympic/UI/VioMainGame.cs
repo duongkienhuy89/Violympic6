@@ -14,11 +14,21 @@ public class VioMainGame : MonoBehaviour {
 
     void onClick_Share()
     {
+		try
+		{
         ShareRate.Share();
+		}
+		catch (System.Exception)
+		{
+
+			throw;
+		}
     }
 
     void onClick_Rate()
     {
+		try
+		{
         if (VioGameController.instance.tienganh)
         {
             ShareRate.Rate();
@@ -27,10 +37,18 @@ public class VioMainGame : MonoBehaviour {
         {
             ShareRate.RateBird();
         }
+		}
+		catch (System.Exception)
+		{
+
+			throw;
+		}
     }
 
 	void onClick_Play()
 	{
+		try
+		{
 		VioPopUpController.instance.ShowLevel ();
 		VioPopUpController.instance.HideMainGame ();
         SoundController.Instance.PlayClick();
@@ -43,12 +61,20 @@ public class VioMainGame : MonoBehaviour {
 				AdStartApp.instance.HideBanner ();
 			}
 		}
+		}
+		catch (System.Exception)
+		{
+
+			throw;
+		}
 
      
 
 	}
 	void onClick_BuyVip()
 	{
+		try
+		{
 		VioPopUpController.instance.HideMainGame ();
         VioPopUpController.instance.ShowBuyItem();
         SoundController.Instance.PlayClick();
@@ -60,9 +86,17 @@ public class VioMainGame : MonoBehaviour {
 				AdStartApp.instance.HideBanner ();
 			}
 		}
+		}
+		catch (System.Exception)
+		{
+
+			throw;
+		}
 	}
 	void onClick_ALTP()
 	{
+		try
+		{
         SoundController.Instance.PlayClick();
 		VioPopUpController.instance.HideMainGame ();
 		if (VioGameController.instance.checkvip != 10) {
@@ -83,6 +117,12 @@ public class VioMainGame : MonoBehaviour {
             
             VioPopUpController.instance.ShowAdTriger();
         }
+		}
+		catch (System.Exception)
+		{
+
+			throw;
+		}
 	}
 
 	public void setData()
@@ -92,11 +132,19 @@ public class VioMainGame : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		try
+		{
 		btnPlay.OnClick += onClick_Play;
 		btnBuyVip.OnClick += onClick_BuyVip;
 		btnALTP.OnClick += onClick_ALTP;
         btnRate.OnClick += onClick_Rate;
         btnShare.OnClick += onClick_Share;
+		}
+		catch (System.Exception)
+		{
+
+			throw;
+		}
 	}
 	
 	// Update is called once per frame

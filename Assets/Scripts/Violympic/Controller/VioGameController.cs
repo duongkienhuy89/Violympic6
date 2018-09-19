@@ -35,6 +35,8 @@ public class VioGameController : MonoBehaviour {
 
 	void Awake()
 	{
+		try
+		{
 		Application.targetFrameRate = 30;
 		QualitySettings.vSyncCount = -1;
 
@@ -42,6 +44,12 @@ public class VioGameController : MonoBehaviour {
 		level = vuotqua + 1;
 		tienganh = CheckNgonNgu ();
 		checkvip = DataManager.GetVip();
+		}
+		catch (System.Exception)
+		{
+
+			throw;
+		}
 	}
 
 	IEnumerator WaitTimeHideLevel(float time)
@@ -155,9 +163,17 @@ public class VioGameController : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 	
+		try
+		{
 		stSumcoin = DataManager.GetHightStringCoin();
 		mang = stSumcoin.Split('+');
 		StartCoroutine(WaitTimeHideLevel(2f));
+		}
+		catch (System.Exception)
+		{
+
+			throw;
+		}
 
 	}
 

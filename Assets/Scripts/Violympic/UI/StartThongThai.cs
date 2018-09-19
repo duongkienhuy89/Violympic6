@@ -9,14 +9,24 @@ public class StartThongThai : MonoBehaviour {
 
 	void onClick_btnPlay()
 	{
+		try
+		{
 		VioPopUpController.instance.HideStartThongThai();
 		VioPopUpController.instance.ShowQuestionMonkey();
         SoundController.Instance.PlayClick();
 		//SoundManager.Instance.PlayAudioChoiTiep();
+		}
+		catch (System.Exception)
+		{
+
+			throw;
+		}
 	}
 
 	// Use this for initialization
 	void Start () {
+		try
+		{
 		btnPlay.OnClick += onClick_btnPlay;
 		if (VioGameController.instance.tienganh)
 		{
@@ -28,6 +38,12 @@ public class StartThongThai : MonoBehaviour {
 		}
 	
 		txtContent.text = ClsLanguage.doContentMoney();
+		}
+		catch (System.Exception)
+		{
+
+			throw;
+		}
 	}
 
 	// Update is called once per frame

@@ -49,6 +49,8 @@ public class SoundController : MonoBehaviour
 
    public void PlayBGMusic()
     {
+		try
+		{
         audioSourceBGMusicCreated =
             GameObject.Instantiate
             (
@@ -56,7 +58,12 @@ public class SoundController : MonoBehaviour
             ) as AudioSource;
         audioSourceBGMusicCreated.loop = true;
         audioSourceBGMusicCreated.Play();
+		}
+		catch (System.Exception)
+		{
 
+			throw;
+		}
      
       
     }

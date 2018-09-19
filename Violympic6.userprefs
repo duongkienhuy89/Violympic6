@@ -6,8 +6,22 @@
       <File FileName="Assets\Scripts\Violympic\UI\StopDinhNui.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\Violympic\Controller\VioLevelController.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\Violympic\UI\StopGame.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Violympic\IpaAd\AdManager.cs" Line="52" Column="223" />
+      <File FileName="Assets\Scripts\Violympic\IpaAd\AdManager.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\Violympic\IpaAd\IAPManager.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Configs\Config.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Configs\ShareRate.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Violympic\UI\Sha.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Violympic\UI\VioMainGame.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Violympic\UI\StartGame.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Violympic\UI\StartDinhNui.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Violympic\UI\QuestionDN.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Violympic\UI\StartThongThai.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Violympic\UI\QuestionMonkey.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Violympic\UI\StopThongThai.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Violympic\UI\HoanThanh.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Violympic\IpaAd\BuyItem.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Controller\SoundController.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Violympic\IpaAd\Advertise.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

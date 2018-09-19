@@ -18,7 +18,8 @@ public class StopGame : MonoBehaviour {
 	void onClick_Continute()
 	{
 
-     
+		try
+		{
 
         if (VioGameController.instance.tienganh)
         {
@@ -44,6 +45,12 @@ public class StopGame : MonoBehaviour {
 		}
 		VioGameController.instance.sumCoin = 0;
 		VioGameController.instance.sumTime = 0;
+		}
+		catch (System.Exception)
+		{
+
+			throw;
+		}
 	}
 
 
@@ -52,6 +59,8 @@ public class StopGame : MonoBehaviour {
 
 	public void setData()
 	{
+		try
+		{
         if (VioGameController.instance.checkvip != 10)
         {
 			
@@ -118,16 +127,29 @@ public class StopGame : MonoBehaviour {
 			VioGameController.instance.level++;
 		}
 		txtTongDiem.text = ClsLanguage.doTongDiem() + VioGameController.instance.sumCoin + "/200";
+		}
+		catch (System.Exception)
+		{
+
+			throw;
+		}
 
 	}
 
 	// Use this for initialization
 	void Start () {
 
+		try
+		{
 		btnContinute.OnClick += onClick_Continute;
 
 		txtTitle.text = ClsLanguage.doTongKet();
-	
+		}
+		catch (System.Exception)
+		{
+
+			throw;
+		}
 
 	}
 

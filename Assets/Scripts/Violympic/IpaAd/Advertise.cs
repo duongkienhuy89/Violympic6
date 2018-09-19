@@ -16,18 +16,27 @@ public class Advertise : MonoBehaviour {
 
     void onClick_Continute()
     {
-		
+	
+		try
+		{
 		if (VioGameController.instance.tienganh && VioGameController.instance.vuotqua < 3) {
 
 				AdManager.instance.ShowAdsInterstitial();
 			} else {
 				AdStartApp.instance.ShowFull();
 			}
+		}
+		catch (System.Exception)
+		{
 
+			throw;
+		}
        
     }
     void onClick_Cancel()
     {
+		try
+		{
         VioPopUpController.instance.HideAdTriger();
         VioPopUpController.instance.ShowMainGame();
         SoundController.Instance.PlayClick();
@@ -40,6 +49,12 @@ public class Advertise : MonoBehaviour {
 				AdStartApp.instance.ShowBanner ();
 			}
 		}
+		}
+		catch (System.Exception)
+		{
+
+			throw;
+		}
     }
 
     public void setData()
@@ -49,10 +64,18 @@ public class Advertise : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		try
+		{
         btnContinute.OnClick += onClick_Continute;
         btnCancel.OnClick += onClick_Cancel;
         txtTitle.text = ClsLanguage.doQuangCao();
         txtContent.text = ClsLanguage.doContenQuangCao();
+		}
+		catch (System.Exception)
+		{
+
+			throw;
+		}
 	}
 	
 	// Update is called once per frame

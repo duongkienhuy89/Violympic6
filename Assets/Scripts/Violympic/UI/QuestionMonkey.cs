@@ -74,6 +74,8 @@ public class QuestionMonkey : MonoBehaviour {
 
 	public void doSubGet(ref List<ThongThai> lst)
 	{
+		try
+		{
 		if (lst.Count > 0)
 		{
 			currentState = State.InGame;
@@ -102,10 +104,18 @@ public class QuestionMonkey : MonoBehaviour {
 
 			lst.RemoveAt(chon);
 		}
+		}
+		catch (System.Exception)
+		{
+
+			throw;
+		}
 	}
 
     public void btnNopBai_OnClick()
     {
+		try
+		{
         if (!stSum.Equals(""))
         {
 			currentState = State.XuLy;
@@ -118,6 +128,12 @@ public class QuestionMonkey : MonoBehaviour {
         {
             SoundController.Instance.PlayOver();
         }
+		}
+		catch (System.Exception)
+		{
+
+			throw;
+		}
     }
 
     IEnumerator WaitTimeXuLy(float time)
@@ -176,7 +192,8 @@ public class QuestionMonkey : MonoBehaviour {
 	void gameOver()
 	{
 
-
+		try
+		{
 		currentState = State.Stop;
 		if (diemSo < 0)
 		{
@@ -187,6 +204,12 @@ public class QuestionMonkey : MonoBehaviour {
 		VioPopUpController.instance.ShowStopThongThai(diemSo, ClsThaoTac.CoverTimeToString(1200 - mTime));
 		VioPopUpController.instance.HideQuestionMonkey();
 		resetDefault();
+		}
+		catch (System.Exception)
+		{
+
+			throw;
+		}
 	}
 
     public void doTrangThai()
@@ -204,6 +227,8 @@ public class QuestionMonkey : MonoBehaviour {
 
 	public void btnContinute_OnClick()
 	{
+		try
+		{
 		if (sttQuestion <10 && demsai<3)
 		{
 			doSubGet(ref lstLevel);
@@ -213,11 +238,18 @@ public class QuestionMonkey : MonoBehaviour {
 			gameOver ();
 		}
         SoundController.Instance.PlayClick();
+		}
+		catch (System.Exception)
+		{
+
+			throw;
+		}
 	}
 
 	public void btnNumb0_OnClick()
 	{
-		
+		try
+		{
 		if (currentState == State.InGame) {
 			stSum += btnNumb0.transform.GetChild (0).GetComponent<tk2dTextMesh> ().text;
 			if ((int.Parse (stSum) + "").Length < 9) {
@@ -228,10 +260,18 @@ public class QuestionMonkey : MonoBehaviour {
                 SoundController.Instance.PlayOver();
 			}
 		}
+		}
+		catch (System.Exception)
+		{
+
+			throw;
+		}
 		
 	}
 	public void btnNumb1_OnClick()
 	{
+		try
+		{
 		if (currentState == State.InGame) {
 			stSum += btnNumb1.transform.GetChild (0).GetComponent<tk2dTextMesh> ().text;
 
@@ -243,9 +283,17 @@ public class QuestionMonkey : MonoBehaviour {
                 SoundController.Instance.PlayOver();
 			}
 		}
+		}
+		catch (System.Exception)
+		{
+
+			throw;
+		}
 	}
 	public void btnNumb2_OnClick()
 	{
+		try
+		{
 		if (currentState == State.InGame) {
 			stSum += btnNumb2.transform.GetChild (0).GetComponent<tk2dTextMesh> ().text;
 			if ((int.Parse (stSum) + "").Length < 9) {
@@ -256,9 +304,17 @@ public class QuestionMonkey : MonoBehaviour {
                 SoundController.Instance.PlayOver();
 			}
 		}
+		}
+		catch (System.Exception)
+		{
+
+			throw;
+		}
 	}
 	public void btnNumb3_OnClick()
 	{
+		try
+		{
 		if (currentState == State.InGame) {
 			stSum += btnNumb3.transform.GetChild (0).GetComponent<tk2dTextMesh> ().text;
 			if ((int.Parse (stSum) + "").Length < 9) {
@@ -269,9 +325,17 @@ public class QuestionMonkey : MonoBehaviour {
                 SoundController.Instance.PlayOver();
 			}
 		}
+		}
+		catch (System.Exception)
+		{
+
+			throw;
+		}
 	}
 	public void btnNumb4_OnClick()
 	{
+		try
+		{
 		if (currentState == State.InGame) {
 			stSum += btnNumb4.transform.GetChild (0).GetComponent<tk2dTextMesh> ().text;
 			if ((int.Parse (stSum) + "").Length < 9) {
@@ -282,9 +346,17 @@ public class QuestionMonkey : MonoBehaviour {
                 SoundController.Instance.PlayOver();
 			}
 		}
+		}
+		catch (System.Exception)
+		{
+
+			throw;
+		}
 	}
 	public void btnNumb5_OnClick()
 	{
+		try
+		{
 		if (currentState == State.InGame) {
 			stSum += btnNumb5.transform.GetChild (0).GetComponent<tk2dTextMesh> ().text;
 			if ((int.Parse (stSum) + "").Length < 9) {
@@ -295,9 +367,17 @@ public class QuestionMonkey : MonoBehaviour {
                 SoundController.Instance.PlayOver();
 			}
 		}
+		}
+		catch (System.Exception)
+		{
+
+			throw;
+		}
 	}
 	public void btnNumb6_OnClick()
 	{
+		try
+		{
 		if (currentState == State.InGame) {
 			stSum += btnNumb6.transform.GetChild (0).GetComponent<tk2dTextMesh> ().text;
 			if ((int.Parse (stSum) + "").Length < 9) {
@@ -308,9 +388,17 @@ public class QuestionMonkey : MonoBehaviour {
                 SoundController.Instance.PlayOver();
 			}
 		}
+		}
+		catch (System.Exception)
+		{
+
+			throw;
+		}
 	}
 	public void btnNumb7_OnClick()
 	{
+		try
+		{
 		if (currentState == State.InGame) {
 			stSum += btnNumb7.transform.GetChild (0).GetComponent<tk2dTextMesh> ().text;
 			if ((int.Parse (stSum) + "").Length < 9) {
@@ -321,9 +409,17 @@ public class QuestionMonkey : MonoBehaviour {
                 SoundController.Instance.PlayOver();
 			}
 		}
+		}
+		catch (System.Exception)
+		{
+
+			throw;
+		}
 	}
 	public void btnNumb8_OnClick()
 	{
+		try
+		{
 		if (currentState == State.InGame) {
 			stSum += btnNumb8.transform.GetChild (0).GetComponent<tk2dTextMesh> ().text;
 			if ((int.Parse (stSum) + "").Length < 9) {
@@ -334,9 +430,17 @@ public class QuestionMonkey : MonoBehaviour {
                 SoundController.Instance.PlayOver();
 			}
 		}
+		}
+		catch (System.Exception)
+		{
+
+			throw;
+		}
 	}
 	public void btnNumb9_OnClick()
 	{
+		try
+		{
 		if (currentState == State.InGame) {
 			stSum += btnNumb9.transform.GetChild (0).GetComponent<tk2dTextMesh> ().text;
 			if ((int.Parse (stSum) + "").Length < 9) {
@@ -347,17 +451,33 @@ public class QuestionMonkey : MonoBehaviour {
                 SoundController.Instance.PlayOver();
 			}
 		}
+		}
+		catch (System.Exception)
+		{
+
+			throw;
+		}
 	}
 	public void btnDelete_OnClick()
 	{
+		try
+		{
 		if (currentState == State.InGame) {
 			stSum = "";
 			txtKetQua.text = "";
             doTrangThai();
 		}
+		}
+		catch (System.Exception)
+		{
+
+			throw;
+		}
 	}
 	public void btnBack_OnClick()
 	{
+		try
+		{
 		if (currentState == State.InGame) {
 			if (!stSum.Trim ().Equals ("")) {
 				stSum = stSum.Remove (stSum.Length - 1, 1);
@@ -372,6 +492,12 @@ public class QuestionMonkey : MonoBehaviour {
                 SoundController.Instance.PlayOver();
 			}
 		}
+		}
+		catch (System.Exception)
+		{
+
+			throw;
+		}
 	}
 	
 
@@ -381,6 +507,8 @@ public class QuestionMonkey : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 
+		try
+		{
 		btnBack.OnClick += btnBack_OnClick;
 		btnDelete.OnClick += btnDelete_OnClick;
 		btnNopBai.OnClick += btnNopBai_OnClick;
@@ -398,6 +526,12 @@ public class QuestionMonkey : MonoBehaviour {
 		btnNopBai.transform.GetChild (0).GetComponent<tk2dTextMesh> ().text = ClsLanguage.doSumit ();
 
         startPosvisi = mBangHoi.gameObject.transform.localPosition;
+		}
+		catch (System.Exception)
+		{
+
+			throw;
+		}
 	
 	}
 	
